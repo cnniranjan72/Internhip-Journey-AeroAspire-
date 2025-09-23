@@ -1,0 +1,123 @@
+<!--Build basic HTML page: About / Photo / Contact sections, Style the sections; header/nav/footer; layout using Flexbox or Grid-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nirnajan C N</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: white;
+    }
+    header {
+      background: lightblue;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    nav {
+      background: lightgreen;
+      text-align: center;
+      padding: 0.5em;
+    }
+    nav a {
+      color: lightblue;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    section {
+      background: #fff;
+      padding: 50px;
+      min-width: 220px;
+      max-width: 300px;
+      border-radius: 6px;
+      box-shadow: 0 3px 3px red;
+      margin-bottom: 1em;
+    }
+
+    #about {
+      text-align: left;
+    }
+
+
+    #photo {
+      text-align: center;
+    }
+    #photo img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      border: 1px solid;
+    }
+
+    
+    .info {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      padding: 2em 1em;
+      flex-wrap: wrap;
+    }
+    #contact p {
+      margin: 40x;
+    }
+
+    body nav a{
+        color: black;
+    }
+    footer {
+      background: lightblue;
+      color: black;
+      text-align: center;
+      padding: 1em 0;
+    }
+    .ph{
+        font-weight: bold;
+        color: blue;
+    }
+    .email{
+        font-weight: underline;
+        color: red;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Web Page</h1>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#photo">Photo</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="info">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I am Niranjan C N.</p>
+      5th sem 
+      <br>
+      AeroAspire 
+      <br>
+      SDE Intern
+    </section>
+    <section id="photo">
+      <h2>Photo</h2>
+      <img src="image.png" alt="Sample Photo">
+      <p>This is me.</p>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="email">Email: cnniranjan72@gmail.com</a></p>
+      <p class="ph">Phone: +91 9108269436</p>
+    </section>
+  </div>
+  <footer>
+    <p>
+        Niranjan C N. This is footer
+    </p>
+  </footer>
+</body>
+</html>
