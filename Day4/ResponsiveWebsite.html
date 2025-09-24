@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Polished Responsive Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      line-height: 1.6;
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    header, footer {
+      background: #004d99;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #007acc;
+      padding: 0.75rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #005999;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1000px;
+      margin: 1rem auto;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
+
+    main {
+      flex: 3;
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+
+    aside {
+      flex: 1;
+      background: white;
+      padding: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.08);
+    }
+
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+
+    button {
+      padding: 0.7rem 1.2rem;
+      font-size: 1rem;
+      margin-top: 1rem;
+      background-color: #007acc;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005999;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+
+      .container {
+        flex-direction: column;
+        padding: 0 0.5rem;
+      }
+
+      main, aside {
+        box-shadow: none;
+        border-radius: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Polished Responsive Layout</h1>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+  <div class="container">
+    <main>
+      <h2>Welcome to my website</h2>
+      <p>This layout adapts on devices of all screen sizes </p> 
+      <p>Hello This is day 5 in AeroAspire</p>
+      <button>Learn More</button>
+    </main>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>AeroAspire Task of Day5</p>
+    </aside>
+  </div>
+  <footer>
+    <p>Nirnajan C N</p>
+  </footer>
+</body>
+</html>
