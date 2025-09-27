@@ -2,6 +2,10 @@
 
 This repository tracks my progress and learnings during my internship as a Computer Science engineering student. It contains project notes, code samples, challenges, and reflections from my hands-on experience in a professional environment.
 
+# Position
+
+I'm working as a Software Development Engineer Intern at AeroAspire
+
 ## Contents
 - Daily/Weekly logs
 - Project contributions
