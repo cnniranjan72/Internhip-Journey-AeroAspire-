@@ -6,6 +6,8 @@ This repository tracks my progress and learnings during my internship as a Compu
 
 I'm working as a Software Development Engineer Intern at AeroAspire
 
+Sep2025 - Present
+
 ## Contents
 - Daily/Weekly logs
 - Project contributions
