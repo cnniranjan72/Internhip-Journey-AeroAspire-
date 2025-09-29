@@ -14,4 +14,9 @@ Sep2025 - Present
 - Key takeaways and skills gained
 - Resources and helpful links
 
+## Instructions
+- To view my Internship Journey:
+  ```
+  git clone https://github.com/cnniranjan72/Internhip-Journey-AeroAspire-.git
+  ```
 > Follow along as I document my growth, share insights, and showcase the work completed throughout my internship.
