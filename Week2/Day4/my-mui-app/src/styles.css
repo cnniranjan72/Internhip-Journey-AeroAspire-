@@ -10,7 +10,6 @@ body.dark-theme {
   background: #0b1020;
 }
 
-/* small responsive adjustments */
 @media (max-width: 600px) {
   .MuiContainer-root {
     padding-left: 12px;

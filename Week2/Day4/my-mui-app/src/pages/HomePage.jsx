@@ -18,7 +18,7 @@ export default function HomePage({ tasks = [], onDelete }) {
           Niranjan's Task Manager
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Keep track of your day — add tasks, set priority, and manage them quickly. Tasks are saved locally in your browser.
+          Keep track of your daily tasks. So that you don't forget them!
         </Typography>
       </Box>
 

@@ -9,13 +9,10 @@ export default function AboutPage() {
           About
         </Typography>
         <Typography paragraph>
-          Simple task manager demo built with React and Material UI. Tasks are stored locally in your browser using localStorage.
+          Hi, I am Niranjan. This is a simple task manager app built with React and Material UI.
         </Typography>
         <Typography>
-          Built by Niranjan — customize it further: add editing, filters, due dates, or sync to a backend.
-        </Typography>
-        <Typography sx={{ mt: 2 }}>
-          Source / docs: <Link href="https://mui.com/" target="_blank" rel="noreferrer">Material UI</Link>
+          I'm a CSE student at AMCEC, 3rd year, 5th sem.
         </Typography>
       </CardContent>
     </Card>
