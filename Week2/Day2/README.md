@@ -1,4 +1,4 @@
-# 📝 Week2 Day1— [Sep29]
+# 📝 Week2 Day2— [Sep30]
 
 ## Task
 - TaskCard component
