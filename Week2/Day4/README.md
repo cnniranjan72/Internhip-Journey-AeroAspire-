@@ -1,4 +1,4 @@
-# 📝 Week2 Day3— [Oct1]
+# 📝 Week2 Day4— [Oct3]
 
 ## Task
 - Add ability to add tasks 
