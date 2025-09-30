@@ -7,8 +7,8 @@
 
 ## Assets
 
-![Screenshot 1](./src/assets/ScaffoldHome.png)
-![Screenshot 2](./src/assets/image.png)
+![Screenshot 1](./my-mui-app/src/assets/ScaffoldHome.png)
+![Screenshot 2](./my-mui-app/src/assets/image.png)
 
 ## Steps Followed
 
