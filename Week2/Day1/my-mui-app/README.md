@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# 📝 Week2 Day1— [Sep29]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Task
+- Scaffold app
+- setup basic folder structure 
+- Create homepage with MUI Typography and AppBar
 
-## Available Scripts
+## Assets
 
-In the project directory, you can run:
+![Screenshot 1](./src/assets/ScaffoldHome.png)
+![Screenshot 2](./src/assets/image.png)
 
-### `npm start`
+## Steps Followed
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 	The scaffold app meaning a basic foundation structure for the development of any project.
+-	Here it was to be built with react and vite.
+-	So the folder structure is as shown in the above picture
+-	Installed the frameworks for react app
+-	Here the my-mui-app contains all the node modules and components
+-	For this first I  created a react app named my-mui-app using the command:
+```
+	npx create-react-app my-mui-app
+```
+-	And then set the current directory to my-mui-app
+-	Installed the material ui and components and also the node modules using the command:
+```
+	npm install @mui/material @emotion/react @emotion/styled
+```
+-	Then to start the react app at the localhost I used the command:
+```
+	npm start
+```
+-	To test the development server:
+```	
+    npm test
+```
+-	The basic code was provided in https://react.dev/learn and referred Gen ai sources.
+-	I am thinking of adding content for the home page to have it started.
+-	Once the local host is started I can save changes and check for result.
