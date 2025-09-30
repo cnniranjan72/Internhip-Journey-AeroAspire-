@@ -12,10 +12,10 @@
 
 
 
-## Steps Followed
+## Details
 -	Added a search and filter option for task management
 -   Filter wueries are based on priorities
 -   A clear button is available for clearing all the search queries
 -   The toggle between Light and Dark theme is available 
 -   All the CRUD operations are made available for the tasks
--   Imprted a few demos for task execution
+-   Imported a few demos for task execution
