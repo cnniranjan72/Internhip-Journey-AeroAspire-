@@ -1,4 +1,4 @@
-# 📝 Week3 Day1— [Oct6]
+# 📝 Week3 Day2— [Oct8]
 
 ---
 
