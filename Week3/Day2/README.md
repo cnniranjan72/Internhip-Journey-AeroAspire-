@@ -37,3 +37,4 @@ Python app.py
 ```
 http://127.0.0.1:5000/tasks/1
 ```
+- Optional filtering via a query is implemented which here is task completion
