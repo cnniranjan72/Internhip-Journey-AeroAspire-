@@ -3,16 +3,12 @@
 ---
 
 ## Learning Topics
-- Python basics
-- Flask setup
-- Project structure
-- REST endpoints: GET, POST
+- PUT / DELETE
+- Parameter passing
+- Path vs query params
 ## Task
-- Setup Flask project
-- Define folder structure (app folder, routes, static etc.)
-- Basic “Hello world” route
-- Implement GET /tasks and POST /tasks with dummy in‑memory storage
-- Test via Postman or curl
+- Add endpoints: DELETE /tasks/<id>, PUT /tasks/<id>
+- Optional filtering via query ‑ e.g. ?completed=true
 
 ## Gallery
 
