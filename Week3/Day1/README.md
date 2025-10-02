@@ -14,12 +14,6 @@
 - Implement GET /tasks and POST /tasks with dummy in‑memory storage
 - Test via Postman or curl
 
-## Gallery
-
-![Screenshot 1](./images/image1.png)
-![Screenshot 2](./images/image2.png)
-![Screenshot 3](./images/image3.png)
-![Screenshot 4](./images/image4.png)
 
 ---
 
@@ -70,3 +64,12 @@ URL: http://127.0.0.1:5000/
 -   Provide required data for fields 
 -   Perform GET and POST operations 
 -   Check for responses and overall functionality
+
+## Gallery
+
+![Screenshot 1](./images/image1.png)
+![Screenshot 2](./images/image2.png)
+![Screenshot 3](./images/image3.png)
+![Screenshot 4](./images/image4.png)
+
+### Niranjan C N
