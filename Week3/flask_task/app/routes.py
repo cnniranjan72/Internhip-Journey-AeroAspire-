@@ -1,5 +1,5 @@
-from flask import Blueprint, jsonify, request
-from flask_cors import CORS
+from flask import Blueprint, jsonify, request # type: ignore
+from flask_cors import CORS # type: ignore
 
 routes = Blueprint("routes", __name__)
 
