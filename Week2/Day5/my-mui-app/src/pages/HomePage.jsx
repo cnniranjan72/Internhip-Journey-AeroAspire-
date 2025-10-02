@@ -16,7 +16,6 @@ export default function HomePage({ tasks = [], onDelete }) {
   const [search, setSearch] = useState('');
   const [priorityFilter, setPriorityFilter] = useState('');
 
-  // Filter tasks
   const filteredTasks = tasks
     .filter(
       (t) =>
@@ -45,14 +44,13 @@ export default function HomePage({ tasks = [], onDelete }) {
         </Typography>
       </Box>
 
-      {/* 🔎 Search + Filter Controls */}
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         spacing={2}
         sx={{ mb: 3 }}
         alignItems="center"
       >
-        {/* Search */}
+        
         <TextField
           label="Search tasks"
           variant="outlined"
@@ -62,7 +60,7 @@ export default function HomePage({ tasks = [], onDelete }) {
           fullWidth
         />
 
-        {/* Priority Filter */}
+       
         <FormControl size="small" sx={{ minWidth: 140 }}>
           <InputLabel>Priority</InputLabel>
           <Select
@@ -79,7 +77,7 @@ export default function HomePage({ tasks = [], onDelete }) {
           </Select>
         </FormControl>
 
-        {/* Clear Button */}
+    
         <Button
           variant="outlined"
           color="secondary"
@@ -92,7 +90,6 @@ export default function HomePage({ tasks = [], onDelete }) {
         </Button>
       </Stack>
 
-      {/* Task List */}
       <TaskCard tasks={filteredTasks} onDelete={onDelete} />
     </Box>
   );

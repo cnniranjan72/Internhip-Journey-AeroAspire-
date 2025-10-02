@@ -6,7 +6,7 @@ export default function themeBuilder(mode = 'light') {
     palette: {
       mode,
       primary: {
-        main: isLight ? '#1976d2' : '#90caf9',
+        main: isLight ? '#193ed2ff' : '#898cebff',
       },
       secondary: {
         main: isLight ? '#f50057' : '#f48fb1',
