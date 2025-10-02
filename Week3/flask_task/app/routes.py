@@ -1,17 +1,22 @@
 from flask import Blueprint, jsonify, request
+from flask_cors import CORS
 
-routes = Blueprint("routes", __name__)   
+routes = Blueprint("routes", __name__)
 
 tasks = []
 task_id = 1
 
+
+CORS(routes)
+
 @routes.route("/")
 def hello():
-    return "Hello, World!I am Niranjan C N"
+    return "Hello, World! I am Niranjan C N"
+
 
 @routes.route("/tasks", methods=["GET"])
 def get_tasks():
-    completed = request.args.get("completed")  # string: "true" / "false" / None
+    completed = request.args.get("completed")  
     if completed is None:
         return jsonify(tasks)
 
@@ -24,15 +29,28 @@ def get_tasks():
 
     return jsonify(filtered)
 
+# POST new task with validation
 @routes.route("/tasks", methods=["POST"])
 def add_task():
     global task_id
+    if not request.is_json:
+        return jsonify({"error": "Invalid JSON"}), 400
+
     data = request.get_json()
+    title = data.get("title")
+    description = data.get("description", "")
+
+    if not title or not isinstance(title, str) or title.strip() == "":
+        return jsonify({"error": "Title must be a non-empty string"}), 400
+
+    if description is not None and not isinstance(description, str):
+        return jsonify({"error": "Description must be a string"}), 400
+
     new_task = {
         "id": task_id,
-        "title": data.get("title"),
-        "description": data.get("description"),
-        "completed": False  # new default
+        "title": title.strip(),
+        "description": description.strip(),
+        "completed": False
     }
     tasks.append(new_task)
     task_id += 1
@@ -47,8 +65,12 @@ def delete_task(task_id):
             tasks.remove(t)
             return jsonify({"message": "Task deleted"}), 200
     return jsonify({"error": "Task not found"}), 404
+
 @routes.route("/tasks/<int:task_id>", methods=["PUT"])
 def update_task(task_id):
+    if not request.is_json:
+        return jsonify({"error": "Invalid JSON"}), 400
+
     data = request.get_json()
     for t in tasks:
         if t["id"] == task_id:
