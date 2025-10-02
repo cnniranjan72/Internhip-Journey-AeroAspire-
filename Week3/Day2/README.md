@@ -10,12 +10,6 @@
 - Add endpoints: DELETE /tasks/<id>, PUT /tasks/<id>
 - Optional filtering via query ‑ e.g. ?completed=true
 
-## Gallery
-
-![Screenshot 1](./images/image1.png)
-![Screenshot 2](./images/image2.png)
-![Screenshot 3](./images/image3.png)
-![Screenshot 4](./images/image4.png)
 
 ---
 
@@ -34,3 +28,11 @@ Python app.py
 http://127.0.0.1:5000/tasks/1
 ```
 - Optional filtering via a query is implemented which here is task completion
+## Gallery
+
+![Screenshot 1](./images/image1.png)
+![Screenshot 2](./images/image2.png)
+![Screenshot 3](./images/image3.png)
+![Screenshot 4](./images/image4.png)
+
+### Niranjan C N
