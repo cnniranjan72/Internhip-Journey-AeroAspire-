@@ -7,7 +7,8 @@ import AboutPage from "./pages/AboutPage";
 import NavBar from "./components/NavBar";
 import themeBuilder from "./theme";
 
-const API_URL = "http://127.0.0.1:5000"; 
+// ✅ Base URL should point to the version root, not directly to /tasks
+const API_BASE = "http://localhost:5000/api/v1";
 
 export default function App() {
   const navigate = useNavigate();
@@ -18,12 +19,12 @@ export default function App() {
 
   const theme = useMemo(() => themeBuilder(mode), [mode]);
 
-
+  // ✅ Fetch all tasks
   useEffect(() => {
     const fetchTasks = async () => {
       setLoading(true);
       try {
-        const res = await fetch(`${API_URL}/tasks`);
+        const res = await fetch(`${API_BASE}/tasks`);
         if (!res.ok) throw new Error("Failed to fetch tasks");
         const data = await res.json();
         setTasks(data);
@@ -36,29 +37,32 @@ export default function App() {
     fetchTasks();
   }, []);
 
+  // ✅ Add new task
   const addTask = async (taskPayload) => {
     try {
-      const res = await fetch(`${API_URL}/tasks`, {
+      const res = await fetch(`${API_BASE}/tasks`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           title: taskPayload.title.trim(),
-          description: taskPayload.description.trim(),
+          description: taskPayload.description?.trim() || "",
         }),
       });
 
       if (!res.ok) throw new Error("Failed to add task");
+
       const newTask = await res.json();
       setTasks((prev) => [newTask, ...prev]);
       navigate("/");
     } catch (err) {
-      console.error(err);
+      console.error("Error adding task:", err);
     }
   };
 
+  // ✅ Delete task
   const deleteTask = async (id) => {
     try {
-      const res = await fetch(`${API_URL}/tasks/${id}`, {
+      const res = await fetch(`${API_BASE}/tasks/${id}`, {
         method: "DELETE",
       });
       if (res.ok) {
@@ -67,10 +71,11 @@ export default function App() {
         console.error("Failed to delete task");
       }
     } catch (err) {
-      console.error(err);
+      console.error("Error deleting task:", err);
     }
   };
 
+  // ✅ Toggle theme
   const toggleTheme = () =>
     setMode((m) => (m === "light" ? "dark" : "light"));
 
