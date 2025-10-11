@@ -55,9 +55,8 @@ export default function TaskCard({ tasks = [], onDelete = () => {} }) {
                       </Typography>
 
                       <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 0.5 }}>
-                        <AccessTimeIcon fontSize="small" />
                         <Typography variant="caption" color="text.secondary">
-                          {new Date(task.createdAt).toLocaleString()}
+                          {task.completed ? 'Completed' : 'Pending'}
                         </Typography>
                       </Stack>
                     </>
