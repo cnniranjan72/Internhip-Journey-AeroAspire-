@@ -1,0 +1,88 @@
+2025-10-12 14:11:30,392 [INFO] in routes: Root endpoint accessed
+2025-10-12 14:12:24,264 [INFO] in routes: Root endpoint accessed
+2025-10-12 14:17:39,608 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:17:39,648 [INFO] in routes: Root endpoint accessed
+2025-10-12 14:17:39,658 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:17:39,658 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:17:39,677 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:17:39,677 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:17:39,677 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:19:34,671 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:19:35,852 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:20:47,276 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:20:58,191 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:23:36,171 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:26:03,636 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:26:18,301 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:26:27,206 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:26:42,924 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,677 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,706 [INFO] in routes: Root endpoint accessed
+2025-10-12 14:27:47,713 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,713 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,731 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,731 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,731 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,748 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,748 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,748 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,748 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,757 [INFO] in routes: Task added: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,757 [INFO] in routes: Task added: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,757 [INFO] in routes: Task added: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,757 [INFO] in routes: Task added: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,764 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,764 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,764 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,764 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,764 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,774 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:27:47,774 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:27:47,774 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:27:47,774 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:27:47,774 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,783 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,798 [INFO] in routes: Task added: {'id': 2, 'title': 'Update Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,800 [INFO] in routes: Task updated: {'id': 1, 'title': 'Test Task', 'description': '', 'completed': True}
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,807 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,823 [INFO] in routes: Task added: {'id': 3, 'title': 'Delete Task', 'description': '', 'completed': False}
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:27:47,824 [INFO] in routes: Task deleted: 1
+2025-10-12 14:29:40,242 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:29:41,469 [INFO] in __init__: Flask App Initialized
+2025-10-12 14:31:31,024 [INFO] in routes: Fetching tasks (completed=None)
+2025-10-12 14:33:39,468 [INFO] in routes: Task added: {'id': 1, 'title': 'Add auth JWT Swagger', 'description': 'Day5task', 'completed': False}
+2025-10-12 14:34:16,393 [INFO] in routes: Task updated: {'id': 1, 'title': 'Add auth JWT Swagger', 'description': 'Day5task', 'completed': True}
+2025-10-12 14:34:31,931 [INFO] in routes: Task deleted: 1

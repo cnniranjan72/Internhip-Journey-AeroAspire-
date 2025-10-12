@@ -1,0 +1,54 @@
+2025-10-12 01:01:58,415 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-10-12 01:01:58,415 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-12 01:01:58,421 [INFO]  * Restarting with stat
+2025-10-12 01:02:00,040 [WARNING]  * Debugger is active!
+2025-10-12 01:02:00,051 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:02:35,370 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:35] "GET /apidocs/ HTTP/1.1" 200 -
+2025-10-12 01:02:35,587 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:35] "[36mGET /flasgger_static/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-10-12 01:02:35,716 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:35] "[36mGET /flasgger_static/lib/jquery.min.js HTTP/1.1[0m" 304 -
+2025-10-12 01:02:35,872 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:35] "[36mGET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-10-12 01:02:36,164 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:36] "[36mGET /flasgger_static/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-10-12 01:02:36,469 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:36] "GET /api/v1/apispec.json HTTP/1.1" 200 -
+2025-10-12 01:02:36,495 [INFO] 127.0.0.1 - - [12/Oct/2025 01:02:36] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-10-12 01:03:43,010 [INFO] 127.0.0.1 - - [12/Oct/2025 01:03:43] "[31m[1mPOST /api/v1/auth/login HTTP/1.1[0m" 401 -
+2025-10-12 01:05:40,994 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app\\auth.py', reloading
+2025-10-12 01:05:41,125 [INFO]  * Restarting with stat
+2025-10-12 01:05:42,496 [WARNING]  * Debugger is active!
+2025-10-12 01:05:42,506 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:05:51,794 [INFO] 127.0.0.1 - - [12/Oct/2025 01:05:51] "POST /api/v1/auth/login HTTP/1.1" 200 -
+2025-10-12 01:07:07,782 [INFO] 127.0.0.1 - - [12/Oct/2025 01:07:07] "GET /api/v1/tasks HTTP/1.1" 200 -
+2025-10-12 01:07:11,021 [INFO] 127.0.0.1 - - [12/Oct/2025 01:07:11] "GET /api/v1/apispec.json HTTP/1.1" 200 -
+2025-10-12 01:08:31,275 [INFO] 127.0.0.1 - - [12/Oct/2025 01:08:31] "GET /api/v1/apispec.json HTTP/1.1" 200 -
+2025-10-12 01:08:58,827 [INFO] 127.0.0.1 - - [12/Oct/2025 01:08:58] "GET /api/v1/apispec.json HTTP/1.1" 200 -
+2025-10-12 01:09:35,679 [INFO] 127.0.0.1 - - [12/Oct/2025 01:09:35] "POST /api/v1/auth/login HTTP/1.1" 200 -
+2025-10-12 01:11:49,290 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /apidocs/ HTTP/1.1" 200 -
+2025-10-12 01:11:49,611 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /flasgger_static/lib/jquery.min.js HTTP/1.1" 200 -
+2025-10-12 01:11:49,616 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /flasgger_static/swagger-ui.css HTTP/1.1" 200 -
+2025-10-12 01:11:49,620 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /flasgger_static/swagger-ui-standalone-preset.js HTTP/1.1" 200 -
+2025-10-12 01:11:49,623 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /flasgger_static/swagger-ui-bundle.js HTTP/1.1" 200 -
+2025-10-12 01:11:49,822 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "GET /api/v1/apispec.json HTTP/1.1" 200 -
+2025-10-12 01:11:49,831 [INFO] 127.0.0.1 - - [12/Oct/2025 01:11:49] "[36mGET /flasgger_static/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-10-12 01:13:10,606 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app\\routes.py', reloading
+2025-10-12 01:13:10,651 [INFO]  * Restarting with stat
+2025-10-12 01:13:11,807 [WARNING]  * Debugger is active!
+2025-10-12 01:13:11,810 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:13:22,872 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app\\models.py', reloading
+2025-10-12 01:13:22,991 [INFO]  * Restarting with stat
+2025-10-12 01:13:24,155 [WARNING]  * Debugger is active!
+2025-10-12 01:13:24,158 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:13:42,259 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app\\__init__.py', reloading
+2025-10-12 01:13:42,345 [INFO]  * Restarting with stat
+2025-10-12 01:13:44,874 [WARNING]  * Debugger is active!
+2025-10-12 01:13:44,877 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:15:30,353 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app\\__init__.py', reloading
+2025-10-12 01:15:30,449 [INFO]  * Restarting with stat
+2025-10-12 01:15:31,286 [WARNING]  * Debugger is active!
+2025-10-12 01:15:31,288 [INFO]  * Debugger PIN: 910-399-392
+2025-10-12 01:15:39,343 [INFO]  * Detected change in 'C:\\Users\\cnnir\\Documents\\AeroAspire\\Week3\\flask_task\\app.py', reloading
+2025-10-12 01:15:39,426 [INFO]  * Restarting with stat
+2025-10-12 01:15:45,390 [INFO]  * Restarting with stat
+2025-10-12 01:17:51,662 [INFO]  * Restarting with stat
+2025-10-12 01:18:39,436 [INFO]  * Restarting with stat
+2025-10-12 01:30:46,808 [INFO]  * Restarting with stat
+2025-10-12 01:37:13,195 [INFO]  * Restarting with stat
