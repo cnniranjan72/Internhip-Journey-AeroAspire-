@@ -12,11 +12,13 @@ CORS(api_v1)
 @api_v1.route("/", methods=["GET"])
 def home():
     """
-    Root endpoint
+    Root Endpoint
     ---
+    tags:
+      - Root
     responses:
       200:
-        description: Welcome message
+        description: API v1 welcome message
         examples:
           application/json: {"message": "This is API v1"}
     """
@@ -27,38 +29,38 @@ def home():
 @api_v1.route("/tasks", methods=["GET"])
 def get_tasks():
     """
-    Get tasks with filters, search and pagination
+    Get all tasks with optional filters and pagination
     ---
     tags:
       - Tasks
     parameters:
-      - in: query
-        name: status
+      - name: status
+        in: query
         type: string
         required: false
-        description: Filter by status (e.g. pending, completed)
-      - in: query
-        name: completed
+        description: Filter tasks by status (pending, completed)
+      - name: completed
+        in: query
         type: string
         required: false
-        description: Legacy boolean filter (true/false) - maps to status=completed
-      - in: query
-        name: search
+        description: Legacy boolean filter (true/false)
+      - name: search
+        in: query
         type: string
         required: false
-        description: Case-insensitive search in title
-      - in: query
-        name: due_date
+        description: Search in title (case-insensitive)
+      - name: due_date
+        in: query
         type: string
         required: false
-        description: Exact due date filter (YYYY-MM-DD)
-      - in: query
-        name: page
+        description: Filter by due date (YYYY-MM-DD)
+      - name: page
+        in: query
         type: integer
         required: false
         description: Page number (default 1)
-      - in: query
-        name: per_page
+      - name: per_page
+        in: query
         type: integer
         required: false
         description: Items per page (default 20)
@@ -66,65 +68,49 @@ def get_tasks():
       200:
         description: Paginated list of tasks
     """
-    # Read query params
-    status = request.args.get("status", type=str)
-    completed = request.args.get("completed", type=str)
-    search = request.args.get("search", type=str)
-    due_date = request.args.get("due_date", type=str)
-
-    # Pagination params with safe defaults
-    try:
-        page = int(request.args.get("page", 1))
-        per_page = int(request.args.get("per_page", 20))
-    except (TypeError, ValueError):
-        return jsonify({"error": "page and per_page must be integers"}), 400
+    status = request.args.get("status")
+    completed = request.args.get("completed")
+    search = request.args.get("search")
+    due_date = request.args.get("due_date")
+    page = request.args.get("page", 1, type=int)
+    per_page = request.args.get("per_page", 20, type=int)
 
     if page < 1 or per_page < 1 or per_page > 200:
-        return jsonify({"error": "page must be >= 1 and per_page must be between 1 and 200"}), 400
+        return jsonify({"error": "page must be >=1 and per_page must be 1-200"}), 400
 
-    # Build base query
     query = Task.query
 
-    # completed (legacy) -> map to status
-    if completed is not None:
+    if completed:
         c = completed.lower()
         if c == "true":
             query = query.filter(Task.status == "completed")
         elif c == "false":
             query = query.filter(Task.status != "completed")
         else:
-            return jsonify({"error": "Invalid completed value (use true/false)"}), 400
+            return jsonify({"error": "Invalid completed value"}), 400
 
-    # status filter (explicit takes precedence over completed if both provided)
     if status:
         query = query.filter(Task.status == status)
 
-    # due_date filter
     if due_date:
-        from datetime import datetime
         try:
             d = datetime.strptime(due_date, "%Y-%m-%d").date()
             query = query.filter(Task.due_date == d)
         except ValueError:
-            return jsonify({"error": "Invalid due_date format (use YYYY-MM-DD)"}), 400
+            return jsonify({"error": "Invalid due_date format"}), 400
 
-    # search by title (case-insensitive)
     if search:
         query = query.filter(Task.title.ilike(f"%{search}%"))
 
-    # Apply ordering (newest first) and paginate
     paginated = query.order_by(Task.created_at.desc()).paginate(page=page, per_page=per_page, error_out=False)
-
-    items = [t.to_dict() for t in paginated.items]
     result = {
         "total": paginated.total,
         "page": paginated.page,
         "per_page": paginated.per_page,
         "pages": paginated.pages,
-        "items": items,
+        "items": [t.to_dict() for t in paginated.items],
     }
 
-    current_app.logger.info(f"Fetched tasks page={page} per_page={per_page} filters={{status:{status}, completed:{completed}, search:{bool(search)}, due_date:{due_date}}}")
     return jsonify(result), 200
 
 
@@ -132,15 +118,15 @@ def get_tasks():
 @jwt_required()
 def add_task():
     """
-    Create a new task (JWT Protected)
+    Create a new task
     ---
     tags:
       - Tasks
     security:
       - Bearer: []
     parameters:
-      - in: body
-        name: body
+      - name: body
+        in: body
         required: true
         schema:
           id: Task
@@ -165,7 +151,6 @@ def add_task():
         description: Unauthorized
     """
     if not request.is_json:
-        current_app.logger.warning("Task creation failed: Invalid JSON")
         return jsonify({"error": "Invalid JSON"}), 400
 
     data = request.get_json()
@@ -182,18 +167,12 @@ def add_task():
         try:
             due_date = datetime.strptime(due_date_str, "%Y-%m-%d").date()
         except ValueError:
-            return jsonify({"error": "due_date must be in YYYY-MM-DD format"}), 400
+            return jsonify({"error": "due_date must be YYYY-MM-DD"}), 400
 
-    new_task = Task(
-        title=title.strip(),
-        description=description.strip(),
-        status=status,
-        due_date=due_date
-    )
-
+    new_task = Task(title=title.strip(), description=description.strip(), status=status, due_date=due_date)
     db.session.add(new_task)
     db.session.commit()
-    current_app.logger.info(f"Task added: {new_task.to_dict()}")
+
     return jsonify(new_task.to_dict()), 201
 
 
@@ -201,19 +180,19 @@ def add_task():
 @jwt_required()
 def update_task(task_id):
     """
-    Update an existing task (JWT Protected)
+    Update a task by ID
     ---
     tags:
       - Tasks
     security:
       - Bearer: []
     parameters:
-      - in: path
-        name: task_id
+      - name: task_id
+        in: path
         type: integer
         required: true
-      - in: body
-        name: body
+      - name: body
+        in: body
         required: true
         schema:
           id: TaskUpdate
@@ -235,7 +214,6 @@ def update_task(task_id):
     """
     task = Task.query.get(task_id)
     if not task:
-        current_app.logger.warning(f"Task update failed: ID {task_id} not found")
         return jsonify({"error": "Task not found"}), 404
 
     data = request.get_json()
@@ -248,40 +226,67 @@ def update_task(task_id):
         try:
             task.due_date = datetime.strptime(due_date_str, "%Y-%m-%d").date()
         except ValueError:
-            return jsonify({"error": "due_date must be in YYYY-MM-DD format"}), 400
+            return jsonify({"error": "due_date must be YYYY-MM-DD"}), 400
 
     db.session.commit()
-    current_app.logger.info(f"Task updated: {task.to_dict()}")
     return jsonify(task.to_dict()), 200
 
 
-@api_v1.route("/tasks/<int:task_id>", methods=["DELETE"])
+@api_v1.route("/tasks/<int:task_id>/complete", methods=["PATCH"])
 @jwt_required()
-def delete_task(task_id):
+def mark_complete(task_id):
     """
-    Delete a task (JWT Protected)
+    Mark a task as completed
     ---
     tags:
       - Tasks
     security:
       - Bearer: []
     parameters:
-      - in: path
-        name: task_id
+      - name: task_id
+        in: path
         type: integer
         required: true
     responses:
       200:
-        description: Task deleted successfully
+        description: Task marked completed
       404:
         description: Task not found
     """
     task = Task.query.get(task_id)
     if not task:
-        current_app.logger.warning(f"Task deletion failed: ID {task_id} not found")
+        return jsonify({"error": "Task not found"}), 404
+
+    task.status = "completed"
+    db.session.commit()
+    return jsonify({"message": "Task marked completed", "task": task.to_dict()}), 200
+
+
+@api_v1.route("/tasks/<int:task_id>", methods=["DELETE"])
+@jwt_required()
+def delete_task(task_id):
+    """
+    Delete a task
+    ---
+    tags:
+      - Tasks
+    security:
+      - Bearer: []
+    parameters:
+      - name: task_id
+        in: path
+        type: integer
+        required: true
+    responses:
+      200:
+        description: Task deleted
+      404:
+        description: Task not found
+    """
+    task = Task.query.get(task_id)
+    if not task:
         return jsonify({"error": "Task not found"}), 404
 
     db.session.delete(task)
     db.session.commit()
-    current_app.logger.info(f"Task deleted: {task_id}")
     return jsonify({"message": "Task deleted"}), 200

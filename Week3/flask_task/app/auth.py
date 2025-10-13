@@ -4,7 +4,6 @@ from datetime import timedelta
 
 auth_bp = Blueprint("auth_bp", __name__, url_prefix="/api/v1/auth")
 
-# Note: keys are stored in lowercase so we normalize username to lower before lookup
 USERS = {
     "niranjan-admin": "pass123"
 }
@@ -18,8 +17,8 @@ def login():
     tags:
       - Authentication
     parameters:
-      - in: body
-        name: body
+      - name: body
+        in: body
         required: true
         schema:
           id: Login
@@ -34,6 +33,10 @@ def login():
     responses:
       200:
         description: Login successful, returns access token
+      400:
+        description: Missing username/password
+      401:
+        description: Invalid credentials
     """
     if not request.is_json:
         return jsonify({"error": "Missing JSON in request"}), 400
@@ -45,7 +48,6 @@ def login():
         return jsonify({"error": "Username and password required"}), 400
 
     normalized_username = username.lower()
-
     if USERS.get(normalized_username) != password:
         return jsonify({"error": "Invalid credentials"}), 401
 
