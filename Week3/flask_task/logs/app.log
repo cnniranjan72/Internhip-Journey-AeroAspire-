@@ -86,3 +86,41 @@
 2025-10-12 14:33:39,468 [INFO] in routes: Task added: {'id': 1, 'title': 'Add auth JWT Swagger', 'description': 'Day5task', 'completed': False}
 2025-10-12 14:34:16,393 [INFO] in routes: Task updated: {'id': 1, 'title': 'Add auth JWT Swagger', 'description': 'Day5task', 'completed': True}
 2025-10-12 14:34:31,931 [INFO] in routes: Task deleted: 1
+2025-10-12 17:10:42,373 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:11:14,135 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:29:39,876 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:29:57,792 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:29:57,792 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:34:20,626 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:34:29,658 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:34:29,658 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:36:13,239 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:36:39,073 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:36:39,073 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:38:36,560 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:40:11,785 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:41:08,573 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:41:40,462 [INFO] in __init__: Flask App Initialized
+2025-10-12 17:44:01,521 [INFO] in __init__: Flask App Initialized
+2025-10-13 10:55:29,013 [INFO] in __init__: Flask App Initialized
+2025-10-13 10:58:33,231 [INFO] in __init__: Flask App Initialized
+2025-10-13 10:58:33,265 [INFO] in __init__: Database tables created or verified.
+2025-10-13 10:58:35,100 [INFO] in __init__: Flask App Initialized
+2025-10-13 10:58:35,118 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:06:31,859 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:06:31,868 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:06:46,060 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:06:46,072 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:07:09,165 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:07:09,179 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:07:19,648 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:07:19,658 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:08:03,003 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:08:03,021 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:08:05,382 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:08:05,391 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:09:11,705 [INFO] in routes: Fetched tasks: page=1, per_page=20, filters={status: None, due_date: None, search: False}
+2025-10-13 11:10:25,426 [INFO] in __init__: Flask App Initialized
+2025-10-13 11:10:25,440 [INFO] in __init__: Database tables created or verified.
+2025-10-13 11:12:35,344 [INFO] in routes: Fetched tasks: page=1, per_page=20, filters={status: None, due_date: None, search: False}
+2025-10-13 13:42:51,523 [INFO] in __init__: Flask App Initialized

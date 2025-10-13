@@ -4,9 +4,11 @@ from datetime import timedelta
 
 auth_bp = Blueprint("auth_bp", __name__, url_prefix="/api/v1/auth")
 
+# Note: keys are stored in lowercase so we normalize username to lower before lookup
 USERS = {
     "niranjan-admin": "pass123"
 }
+
 
 @auth_bp.route("/login", methods=["POST"])
 def login():
@@ -32,15 +34,6 @@ def login():
     responses:
       200:
         description: Login successful, returns access token
-        schema:
-          id: Token
-          properties:
-            access_token:
-              type: string
-      400:
-        description: Missing JSON or fields
-      401:
-        description: Invalid credentials
     """
     if not request.is_json:
         return jsonify({"error": "Missing JSON in request"}), 400
