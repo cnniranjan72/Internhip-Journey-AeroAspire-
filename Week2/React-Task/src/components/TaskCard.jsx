@@ -45,7 +45,7 @@ export default function TaskCard({ tasks = [], onDelete = () => {} }) {
                   primary={
                     <Box display="flex" alignItems="center" gap={1}>
                       <Typography variant="subtitle1">{task.title}</Typography>
-                      <Chip label={`P${task.priority}`} size="small" />
+                      <Chip label={`P${task.priority || 3}`} size="small" />
                     </Box>
                   }
                   secondary={
@@ -57,7 +57,7 @@ export default function TaskCard({ tasks = [], onDelete = () => {} }) {
                       <Stack direction="row" spacing={1} alignItems="center" sx={{ mt: 0.5 }}>
                         <AccessTimeIcon fontSize="small" />
                         <Typography variant="caption" color="text.secondary">
-                          {new Date(task.createdAt).toLocaleString()}
+                          {new Date(task.created_at || task.createdAt || Date.now()).toLocaleString()}
                         </Typography>
                       </Stack>
                     </>

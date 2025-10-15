@@ -38,6 +38,7 @@ export default function AddTaskPage({ onAdd }) {
     e.preventDefault();
     setSuccess('');
     if (!validate()) return;
+
     onAdd({ title, description, priority: Number(priority) });
     setTitle('');
     setDescription('');

@@ -10,10 +10,11 @@ import os
 from .routes import api_v1
 from .auth import auth_bp
 from .models import db
+from flask_migrate import Migrate
 
 def create_app():
     app = Flask(__name__)
-    CORS(app)
+    CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
     app.config["SECRET_KEY"] = "supersecret123"
     app.config["JWT_SECRET_KEY"] = "jwtsecretkey123"
@@ -29,6 +30,7 @@ def create_app():
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
     db.init_app(app)
+    migrate = Migrate(app, db)
     JWTManager(app)
 
     logs_dir = os.path.join(project_root, "logs")
